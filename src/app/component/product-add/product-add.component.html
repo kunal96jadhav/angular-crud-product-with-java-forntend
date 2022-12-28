@@ -1,0 +1,24 @@
+
+<div class="container bg-light p-3 ">
+    <h5 class="text-center">Product Form</h5>
+    <form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" formControlName="productId" placeholder="Product Id">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" formControlName="productName"  placeholder="Product Name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" formControlName="productPrice" placeholder="Product Price">
+          </div>
+        </div>
+
+            <div class="row mt-2">
+                <div class="example-button-row ">
+                  <button mat-raised-button color="primary">Submit</button>
+                </div>
+           
+        </div>
+      </form>
+</div>

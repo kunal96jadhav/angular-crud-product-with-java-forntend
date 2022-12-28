@@ -1,0 +1,27 @@
+
+<div class="container bg-light p-3">
+    <h5 class="text-center">ALL PRODUCT LIST TABLE</h5>
+    <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">PRODUCT ID</th>
+                <th scope="col">PRODUCT NAME</th>
+                <th scope="col">PRODUCT PRICE</th>
+                <th scope="col">EDIT</th>
+                <th scope="col">DELETE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of product">
+                <th scope="row">{{p.productId}}</th>
+                <td>{{p.productName}}</td>
+                <td>{{p.productPrice}}</td>
+                <td><i class="fa fa-pencil" aria-hidden="true" (click)="productEdit(p)"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true" (click)="productDelete(p.productId)"></i></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
